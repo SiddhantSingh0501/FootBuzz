@@ -1,0 +1,139 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Background Image with Blur */
+body {
+    background: url("https://www.shutterstock.com/image-illustration/packed-american-football-stadium-night-600nw-2483497829.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    backdrop-filter: blur(8px); /* Apply blur effect to the background */
+    z-index: -1; /* Ensure this stays behind the content */
+}
+
+/* Banner Section */
+.banner {
+    width: 100%;
+    height: 250px; /* Adjust height as needed */
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content Section */
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.8); /* Dark background for contrast */
+    border-radius: 8px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header nav span {
+    margin: 0 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #f1f1f1;
+}
+
+/* Main Content */
+main {
+    margin-top: 2rem;
+}
+
+main h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #1c2a45;
+    padding-bottom: 0.5rem;
+}
+
+/* Scoreboard Grid */
+.scoreboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+/* Match Card */
+.match-card {
+    background: rgba(22, 36, 62, 0.9); /* Semi-transparent card for visibility */
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.match-card .match-info {
+    flex: 1;
+}
+
+.match-card h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.match-card .league {
+    font-size: 0.9rem;
+    color: #9faec6;
+}
+
+.match-card .time {
+    font-size: 0.8rem;
+    color: #9faec6;
+}
+
+.match-card .scores {
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: #9faec6;
+    background: rgba(22, 36, 62, 0.9);
+    border-radius: 8px;
+}
